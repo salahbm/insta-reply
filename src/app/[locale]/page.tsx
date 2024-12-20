@@ -11,20 +11,11 @@ const Home = (): JSX.Element => {
 
       {/* CHECK OUT THE README */}
       <Link
-        href="https://gitlab.com/momenti/nextjs-boilerplate-by-salah/-/blob/main/README.md"
+        href="https://github.com/salahbm/nextjs-kit"
         target="_blank"
         className="font-body-1 text-gray-6 underline"
       >
         Check out the README
-      </Link>
-
-      {/* CHECK OUT THE MOMENTI-ESLINT */}
-      <Link
-        href="https://gitlab.com/momenti/momenti-eslint"
-        target="_blank"
-        className="font-body-2 text-gray-7 underline"
-      >
-        This Project uses Momenti ESLint
       </Link>
     </div>
   );
