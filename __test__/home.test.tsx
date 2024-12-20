@@ -23,17 +23,6 @@ describe('Home Component', () => {
     expect(readmeLink).toBeInTheDocument();
     expect(readmeLink).toHaveAttribute(
       'href',
-      'https://gitlab.com/momenti/nextjs-boilerplate-by-salah/-/blob/main/README.md',
+      'https://github.com/salahbm/nextjs-kit',
     );
-
-    // Check if the ESLint link is rendered
-    const eslintLink = screen.getByRole('link', {
-      name: /This Project uses Momenti ESLint/i,
-    });
-    expect(eslintLink).toBeInTheDocument();
-    expect(eslintLink).toHaveAttribute(
-      'href',
-      'https://gitlab.com/momenti/momenti-eslint',
-    );
-  });
 });
