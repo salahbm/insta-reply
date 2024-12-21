@@ -1,6 +1,7 @@
 {
   "i18n-ally.localesPaths": ["locales", "src/i18n"],
   "cSpell.words": [
+    "insta",
     "momenti",
     "Transpiles"
   ]

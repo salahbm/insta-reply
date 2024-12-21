@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.1-alpha.0](https://github.com/salahbm/insta-reply/compare/v0.4.0...v0.4.1-alpha.0) (2024-12-21)
 
-
 ### 📦 Code Refactoring
 
-* **project:** updated the project ([19b54a1](https://github.com/salahbm/insta-reply/commit/19b54a182785503e9f2ec7bc8f89d6ef73060ac4))
+- **project:** updated the project ([19b54a1](https://github.com/salahbm/insta-reply/commit/19b54a182785503e9f2ec7bc8f89d6ef73060ac4))
 
 ## [0.4.0](https://gitlab.com/momenti/nextjs-boilerplate-by-salah/compare/v0.3.0-alpha.1...v0.4.0) (2024-12-20)
 
