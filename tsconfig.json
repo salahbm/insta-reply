@@ -31,7 +31,8 @@
       "@/providers/*": ["providers/*"],
       "@/locales/*": ["../locales/*"],
       "@/public/*": ["../public/*"],
-      "@/i18n/*": ["i18n/*"]
+      "@/i18n/*": ["i18n/*"],
+      "@/icons/*": ["icons/*"]
     },
     "target": "ES2017"
   },
