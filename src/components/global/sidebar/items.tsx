@@ -8,7 +8,7 @@ type Props = {
   slug: string;
 };
 
-const Items = ({ page, slug }: Props) => {
+const Items = ({ page, slug }: Props): JSX.Element | React.ReactNode => {
   return SIDEBAR_MENU.map((item) => (
     <Link
       key={item.id}

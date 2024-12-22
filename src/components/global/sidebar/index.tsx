@@ -6,9 +6,8 @@ import Items from './items';
 import { Separator } from '@/components/ui/separator';
 import ClerkAuthState from '../clerk-auth-state';
 import { HelpDuoToneWhite } from '@/icons';
-// import { SubscriptionPlan } from '../subscription-plan';
-// import UpgradeCard from './upgrade';
 import { usePaths } from '@/hooks/use-nav';
+import UpgradeCard from './upgrade';
 
 type Props = {
   slug: string;
@@ -39,11 +38,11 @@ const Sidebar = ({ slug }: Props): JSX.Element => {
             <p className="text-[#9B9CA0]">Help</p>
           </div>
         </div>
-        {/* <SubscriptionPlan type="FREE">
-          <div className="flex flex-1 flex-col justify-end">
-            <UpgradeCard />
-          </div>
-        </SubscriptionPlan> */}
+        {/* <SubscriptionPlan type="FREE"> */}
+        <div className="flex flex-1 flex-col justify-end">
+          <UpgradeCard />
+        </div>
+        {/* </SubscriptionPlan> */}
       </div>
     </div>
   );

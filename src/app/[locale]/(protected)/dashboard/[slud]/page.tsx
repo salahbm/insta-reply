@@ -11,14 +11,14 @@ const Page = (_props: Props): JSX.Element => {
           <DoubleGradientCard key={card.id} {...card} />
         ))}
       </div> */}
-      <div className="border-in-active/50 relative rounded-xl border-[1px] p-5">
+      <div className="relative rounded-xl border-[1px] border-in-active/50 p-5">
         <span className="z-50 flex items-center gap-x-1">
           <BarDuoToneBlue />
           <div className="z-50">
             <h2 className="text-2xl font-medium text-white">
               Automated Activity
             </h2>
-            <p className="text-text-secondary text-sm">
+            <p className="text-sm text-text-secondary">
               Automated 0 out of 1 interactions
             </p>
           </div>
