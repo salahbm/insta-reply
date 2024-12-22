@@ -1,58 +1,39 @@
 import type { Config } from 'tailwindcss';
-import tailwindcss_animate from 'tailwindcss-animate';
 
-const config: Config = {
+const config = {
   darkMode: ['class'],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: '',
   theme: {
     container: {
       center: true,
-      screens: {},
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
     },
     extend: {
-      fontFamily: {
-        pretendard: ['var(--font-pretendard)', 'sans-serif'],
-      },
       colors: {
-        white: 'var(--white)',
-        'white-04': 'var(--white-04)',
-        black: 'var(--black)',
-        'black-04': 'var(--black-04)',
-        gray: 'var(--gray)',
-        'gray-1': 'var(--gray-1)',
-        'gray-2': 'var(--gray-2)',
-        'gray-3': 'var(--gray-3)',
-        'gray-4': 'var(--gray-4)',
-        'gray-5': 'var(--gray-5)',
-        'gray-6': 'var(--gray-6)',
-        'gray-7': 'var(--gray-7)',
-        red: 'var(--red)',
-        'red-1': 'var(--red-1)',
-        'red-2': 'var(--red-2)',
-        'red-3': 'var(--red-3)',
-        'red-4': 'var(--red-4)',
-        blue: 'var(--blue)',
-        'blue-light': 'var(--blue-light)',
-        green: 'var(--green)',
-        'green-light': 'var(--green-light)',
-        purple: 'var(--purple)',
-        'purple-light': 'var(--purple-light)',
-        yellow: 'var(--yellow)',
-        'yellow-light': 'var(--yellow-light)',
+        'in-active': '#545454',
+        connector: '#F0F1F6',
+        'keyword-yellow': '#E1CE26',
+        'keyword-purple': '#7C21D6',
+        'keyword-red': '#EB441F',
+        'keyword-green': '#2FE699',
+        'light-blue': '#3352CC',
+        'background-90': '#1D1D1D',
+        'background-80': '#252525',
+        'text-secondary': '#9B9CA0',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -60,6 +41,10 @@ const config: Config = {
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
@@ -69,13 +54,14 @@ const config: Config = {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
@@ -93,6 +79,11 @@ const config: Config = {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {
@@ -116,14 +107,9 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
-      },
     },
   },
+  plugins: [require('tailwindcss-animate')],
+} satisfies Config;
 
-  plugins: [tailwindcss_animate, require('tailwindcss-animate')],
-};
 export default config;
