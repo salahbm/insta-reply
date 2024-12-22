@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
   ];
   return (
     <main>
-      <section className="via-blue-900 to-bg relative bg-gradient-to-b from-slate-900">
+      <section className="to-bg relative bg-gradient-to-b from-slate-900 via-blue-900">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
         <div className="relative">
           <div className="container px-4 py-8">
@@ -53,7 +53,7 @@ export default function Home(): JSX.Element {
                   Slide
                 </span>
               </div>
-              <nav className="text-blue-200 hidden space-x-6 text-sm md:block">
+              <nav className="hidden space-x-6 text-sm text-blue-200 md:block">
                 <Link href="#features">Features</Link>
                 <Link href="#pricing">Pricing</Link>
                 <Link href="#about">About</Link>
@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
                 Transform Your Instagram Engagement with Slide
               </h1>
 
-              <p className="text-blue-200 mt-6 text-lg">
+              <p className="mt-6 text-lg text-blue-200">
                 Slide revolutionizes how you connect with your audience on
                 Instagram. Automate responses and boost engagement effortlessly,
                 turning interactions into valuable business opportunities.
@@ -77,7 +77,7 @@ export default function Home(): JSX.Element {
               <div className="mt-8 flex justify-center gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  className="bg-blue-600 text-white hover:bg-blue-700"
                 >
                   Get Started
                 </Button>

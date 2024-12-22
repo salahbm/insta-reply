@@ -6,6 +6,7 @@ import '@/styles/globals.css';
 import React from 'react';
 import pretendard from '@/public/fonts';
 import { ClerkProvider } from '@clerk/nextjs';
+import { RootProvider } from '@/providers/root';
 
 export function generateStaticParams(): { locale: string }[] {
   return routing.locales.map((locale) => ({ locale }));
@@ -40,7 +41,9 @@ export default async function IndexLayout({
   return (
     <ClerkProvider>
       <html lang={locale}>
-        <body className={pretendard.className}>{children}</body>
+        <body className={pretendard.className} suppressHydrationWarning>
+          <RootProvider>{children}</RootProvider>
+        </body>
       </html>
     </ClerkProvider>
   );
