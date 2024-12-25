@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import { ThemeProvider } from './theme';
+
 import { Toaster } from '@/components/ui/sonner';
 
 export function RootProvider({

@@ -1,15 +1,7 @@
-// import {
-//   dehydrate,
-//   HydrationBoundary,
-//   QueryClient,
-// } from '@tanstack/react-query';
+import React from 'react';
+
 import InfoBar from '@/components/global/infobar';
 import Sidebar from '@/components/global/sidebar';
-import React from 'react';
-// import {
-//   PrefetchUserAutnomations,
-//   PrefetchUserProfile,
-// } from '@/react-query/prefetch';
 
 type Props = {
   children: React.ReactNode;

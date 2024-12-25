@@ -1,13 +1,16 @@
 'use client';
 
-import { LogoSmall } from '@/svgs/logo-small';
 import React from 'react';
-import Items from './items';
-import { Separator } from '@/components/ui/separator';
+
 import ClerkAuthState from '../clerk-auth-state';
-import { HelpDuoToneWhite } from '@/icons';
-import { usePaths } from '@/hooks/use-nav';
+
+import Items from './items';
 import UpgradeCard from './upgrade';
+
+import { Separator } from '@/components/ui/separator';
+import { usePaths } from '@/hooks/use-nav';
+import { HelpDuoToneWhite } from '@/icons';
+import { LogoSmall } from '@/svgs/logo-small';
 
 type Props = {
   slug: string;

@@ -1,12 +1,15 @@
+import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+
+import React from 'react';
 import { BRAND_NAME } from '@/constants/brand';
 import { routing } from '@/i18n/routing';
+
 import '@/styles/globals.css';
-import React from 'react';
-import pretendard from '@/public/fonts';
-import { ClerkProvider } from '@clerk/nextjs';
+
 import { RootProvider } from '@/providers/root';
+import pretendard from '@/public/fonts';
 
 export function generateStaticParams(): { locale: string }[] {
   return routing.locales.map((locale) => ({ locale }));

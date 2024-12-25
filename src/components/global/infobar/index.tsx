@@ -2,17 +2,21 @@
 
 import { Menu } from 'lucide-react';
 import React from 'react';
-import Items from '../sidebar/items';
-import { Separator } from '@/components/ui/separator';
+
+import MainBreadCrumb from '../bread-crumbs/main-bread-crumb';
 import ClerkAuthState from '../clerk-auth-state';
-import { HelpDuoToneWhite } from '@/icons';
-import UpgradeCard from '../sidebar/upgrade';
-import { LogoSmall } from '@/svgs/logo-small';
-import Search from './search';
-import { Notifications } from './notifications';
-import { usePaths } from '@/hooks/use-nav';
-import { PAGE_BREAD_CRUMBS } from '@/constants/pages';
 import Sheet from '../sheet';
+import Items from '../sidebar/items';
+import UpgradeCard from '../sidebar/upgrade';
+
+import { Notifications } from './notifications';
+import Search from './search';
+
+import { Separator } from '@/components/ui/separator';
+import { PAGE_BREAD_CRUMBS } from '@/constants/pages';
+import { usePaths } from '@/hooks/use-nav';
+import { HelpDuoToneWhite } from '@/icons';
+import { LogoSmall } from '@/svgs/logo-small';
 
 type Props = {
   slug: string;
@@ -63,7 +67,7 @@ const InfoBar = ({ slug }: Props): JSX.Element | React.ReactNode => {
           {/* <CreateAutomation /> */}
           <Notifications />
         </div>
-        {/* <MainBreadCrumb page={page === slug ? 'Home' : page} slug={slug} /> */}
+        <MainBreadCrumb page={page === slug ? 'Home' : page} slug={slug} />
       </div>
     )
   );

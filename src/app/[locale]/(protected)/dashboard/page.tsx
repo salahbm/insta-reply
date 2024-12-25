@@ -1,13 +1,13 @@
-import React from 'react';
+import { redirect } from 'next/navigation';
 
-export const metadata = {
-  title: 'Dashboard',
+const OnBoardPage = async () => {
+  // const user = await onBoardUser();
+  const user = { status: 200, data: { firstname: 'John', lastname: 'Doe' } };
+  if (user.status === 200 || user.status === 201) {
+    return redirect(`dashboard/${user.data?.firstname}${user.data?.lastname}`);
+  }
+
+  return redirect('/sign-in');
 };
 
-type Props = {};
-
-const Dashboard = async (_props: Props): Promise<JSX.Element> => {
-  return <div>Dashboard</div>;
-};
-
-export default Dashboard;
+export default OnBoardPage;

@@ -4,15 +4,14 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.1-alpha.1](https://github.com/salahbm/insta-reply/compare/v0.4.1-alpha.0...v0.4.1-alpha.1) (2024-12-22)
 
-
 ### ✨ Features
 
-* all shadcn ui init ([ef908b6](https://github.com/salahbm/insta-reply/commit/ef908b6d1b05a796c67256de545d8a7175fc1563))
-* clerk init ([2bb7b4e](https://github.com/salahbm/insta-reply/commit/2bb7b4e1fc2ee083c0da7a4aecf0f2a0a2bd64ca))
-* **infobar:** info bar, notificaitons, search ([a4e75be](https://github.com/salahbm/insta-reply/commit/a4e75be96e20efcf4b0a13cd7f27fc62d3ccf60c))
-* prisma scheme init ([b027e2e](https://github.com/salahbm/insta-reply/commit/b027e2e11ed2d358d23771f25ce564844f0e9dad))
-* svg, side bar, components ([9c4c6a5](https://github.com/salahbm/insta-reply/commit/9c4c6a5a554266fe78e72f05fb62645ee293a652))
-* theme, sooner ([dcb66a4](https://github.com/salahbm/insta-reply/commit/dcb66a49acb93b11c536d8cbbe55748f80644dac))
+- all shadcn ui init ([ef908b6](https://github.com/salahbm/insta-reply/commit/ef908b6d1b05a796c67256de545d8a7175fc1563))
+- clerk init ([2bb7b4e](https://github.com/salahbm/insta-reply/commit/2bb7b4e1fc2ee083c0da7a4aecf0f2a0a2bd64ca))
+- **infobar:** info bar, notificaitons, search ([a4e75be](https://github.com/salahbm/insta-reply/commit/a4e75be96e20efcf4b0a13cd7f27fc62d3ccf60c))
+- prisma scheme init ([b027e2e](https://github.com/salahbm/insta-reply/commit/b027e2e11ed2d358d23771f25ce564844f0e9dad))
+- svg, side bar, components ([9c4c6a5](https://github.com/salahbm/insta-reply/commit/9c4c6a5a554266fe78e72f05fb62645ee293a652))
+- theme, sooner ([dcb66a4](https://github.com/salahbm/insta-reply/commit/dcb66a49acb93b11c536d8cbbe55748f80644dac))
 
 ### [0.4.1-alpha.0](https://github.com/salahbm/insta-reply/compare/v0.4.0...v0.4.1-alpha.0) (2024-12-21)
 

@@ -1,5 +1,6 @@
-import { BarDuoToneBlue } from '@/icons';
 import React from 'react';
+
+import { BarDuoToneBlue } from '@/icons';
 
 type Props = {};
 
