@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p 4000",
-    "format": "prettier --write && eslint --fix .",
+    "format": "prettier --write --ignore-path .gitignore .",
     "lint": "eslint . ",
     "lint:fix": "eslint . --fix",
     "lint:strict": "next lint --max-warnings 0",
