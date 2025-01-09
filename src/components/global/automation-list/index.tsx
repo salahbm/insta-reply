@@ -1,45 +1,43 @@
 'use client';
+import { usePaths } from '@/hooks/user-nav';
 import { cn, getMonth } from '@/lib/utils';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { usePaths } from '@/hooks/use-nav';
+import React, { useMemo } from 'react';
 import GradientButton from '../gradient-button';
+import { Button } from '@/components/ui/button';
+import { useQueryAutomations } from '@/hooks/user-queries';
+import CreateAutomation from '../create-automation';
+import { useMutationDataState } from '@/hooks/use-mutation-data';
 
-const AutomationList = () => {
-  // const { data } = useQueryAutomations();
+type Props = {};
 
-  // const { latestVariable } = useMutationDataState(['create-automation']);
+const AutomationList = (props: Props) => {
+  const { data } = useQueryAutomations();
+
+  const { latestVariable } = useMutationDataState(['create-automation']);
+  console.log(latestVariable);
   const { pathname } = usePaths();
 
-  // const optimisticUiData = useMemo(() => {
-  //   if (latestVariable && latestVariable?.variables && data) {
-  //     const test = [latestVariable.variables, ...data.data];
-  //     return { data: test };
-  //   }
-  //   return data || { data: [] };
-  // }, [latestVariable, data]);
+  const optimisticUiData = useMemo(() => {
+    if (latestVariable && latestVariable?.variables && data) {
+      const test = [latestVariable.variables, ...data.data];
+      return { data: test };
+    }
+    return data || { data: [] };
+  }, [latestVariable, data]);
 
-  // if (data?.status !== 200 || data.data.length <= 0) {
-  //   return (
-  //     <div className="flex h-[70vh] flex-col items-center justify-center gap-y-3">
-  //       <h3 className="text-lg text-gray-400">No Automations </h3>
-  //       <CreateAutomation />
-  //     </div>
-  //   );
-  // }
+  if (data?.status !== 200 || data.data.length <= 0) {
+    return (
+      <div className="flex h-[70vh] flex-col items-center justify-center gap-y-3">
+        <h3 className="text-lg text-gray-400">No Automations </h3>
+        <CreateAutomation />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-y-3">
-      {[
-        {
-          id: '1',
-          name: 'Untitled',
-          keywords: [{ id: '1', word: 'test' }],
-          createdAt: new Date(),
-          updatedAt: new Date(),
-          listener: { listener: 'test' },
-        },
-      ].map((automation) => (
+      {optimisticUiData.data!.map((automation) => (
         <Link
           href={`${pathname}/${automation.id}`}
           key={automation.id}
@@ -55,7 +53,7 @@ const AutomationList = () => {
               <div className="mt-3 flex flex-wrap gap-x-2">
                 {
                   //@ts-ignore
-                  automation.keywords.map((keyword, _key) => (
+                  automation.keywords.map((keyword, key) => (
                     <div
                       key={keyword.id}
                       className={cn(

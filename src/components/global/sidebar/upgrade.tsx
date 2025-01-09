@@ -1,10 +1,9 @@
 import React from 'react';
-
 import PaymentButton from '../payment-button';
 
 type Props = {};
 
-const UpgradeCard = (_props: Props): JSX.Element => {
+const UpgradeCard = (props: Props) => {
   return (
     <div className="flex flex-col gap-y-3 rounded-2xl bg-[#252525] p-3">
       <span className="text-sm">

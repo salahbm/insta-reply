@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   ClerkLoading,
   SignedIn,
@@ -6,15 +7,12 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import { User } from 'lucide-react';
-import React from 'react';
-
 import Loader from '../loader';
-
 import { Button } from '@/components/ui/button';
 
 type Props = {};
 
-const ClerkAuthState = (_props: Props): JSX.Element => {
+const ClerkAuthState = (props: Props) => {
   return (
     <>
       <ClerkLoading>

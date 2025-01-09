@@ -1,9 +1,8 @@
-import { CircleCheck } from 'lucide-react';
-import React from 'react';
-
 import { Button } from '@/components/ui/button';
 import { PLANS } from '@/constants/pages';
 import { cn } from '@/lib/utils';
+import { CircleCheck } from 'lucide-react';
+import React from 'react';
 
 type Props = {
   label: string;

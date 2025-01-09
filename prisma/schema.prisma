@@ -33,7 +33,6 @@ model Subscription {
   plan       SUBSCRIPTION_PLAN @default(FREE)
   updatedAt  DateTime          @default(now())
   customerId String?           @unique
-  tokens     Int               @default(15)
 }
 
 model Integrations {

@@ -5,7 +5,11 @@ import { routing } from './i18n/routing';
 
 const intlMiddleware = createMiddleware(routing);
 
-const isProtectedRoute = createRouteMatcher(['dashboard/(.*)']);
+const isProtectedRoute = createRouteMatcher([
+  '/dashboard(.*)',
+  '/api/payment(.*)',
+  '/callback(.*)',
+]);
 
 export default clerkMiddleware(async (auth, req) => {
   if (isProtectedRoute(req)) await auth.protect();

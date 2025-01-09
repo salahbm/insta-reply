@@ -3,7 +3,7 @@ type Props = {
   height?: string;
 };
 
-const VideoRecorderDuotoneWhite = (_props: Props) => {
+const VideoRecorderDuotoneWhite = (props: Props) => {
   return (
     <svg
       width="24"

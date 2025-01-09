@@ -1,22 +1,19 @@
 'use client';
-
-import React from 'react';
-
-import ClerkAuthState from '../clerk-auth-state';
-
-import Items from './items';
-import UpgradeCard from './upgrade';
-
-import { Separator } from '@/components/ui/separator';
-import { usePaths } from '@/hooks/use-nav';
-import { HelpDuoToneWhite } from '@/icons';
+import { usePaths } from '@/hooks/user-nav';
 import { LogoSmall } from '@/svgs/logo-small';
+import React from 'react';
+import Items from './items';
+import { Separator } from '@/components/ui/separator';
+import ClerkAuthState from '../clerk-auth-state';
+import { HelpDuoToneWhite } from '@/icons';
+import { SubscriptionPlan } from '../subscription-plan';
+import UpgradeCard from './upgrade';
 
 type Props = {
   slug: string;
 };
 
-const Sidebar = ({ slug }: Props): JSX.Element => {
+const Sidebar = ({ slug }: Props) => {
   const { page } = usePaths();
 
   return (
@@ -41,11 +38,11 @@ const Sidebar = ({ slug }: Props): JSX.Element => {
             <p className="text-[#9B9CA0]">Help</p>
           </div>
         </div>
-        {/* <SubscriptionPlan type="FREE"> */}
-        <div className="flex flex-1 flex-col justify-end">
-          <UpgradeCard />
-        </div>
-        {/* </SubscriptionPlan> */}
+        <SubscriptionPlan type="FREE">
+          <div className="flex flex-1 flex-col justify-end">
+            <UpgradeCard />
+          </div>
+        </SubscriptionPlan>
       </div>
     </div>
   );

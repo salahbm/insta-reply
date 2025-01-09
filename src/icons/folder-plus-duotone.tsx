@@ -1,6 +1,6 @@
 type Props = {};
 
-const FolderPlusDuotine = (_props: Props) => {
+const FolderPlusDuotine = (props: Props) => {
   return (
     <svg
       width="24"

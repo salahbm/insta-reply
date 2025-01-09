@@ -1,9 +1,9 @@
+import Loader from '@/components/global/loader';
 import React from 'react';
 
-import Loader from '@/components/global/loader';
 type Props = {};
 
-const Loading = (_props: Props): JSX.Element => {
+const Loading = (props: Props) => {
   return (
     <div className="flex h-screen items-center justify-center">
       <Loader state>...Loading</Loader>

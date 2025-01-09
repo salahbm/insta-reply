@@ -1,28 +1,27 @@
 'use client';
 
+import { PAGE_BREAD_CRUMBS } from '@/constants/pages';
+import { usePaths } from '@/hooks/user-nav';
 import { Menu } from 'lucide-react';
 import React from 'react';
-
-import MainBreadCrumb from '../bread-crumbs/main-bread-crumb';
-import ClerkAuthState from '../clerk-auth-state';
 import Sheet from '../sheet';
 import Items from '../sidebar/items';
-import UpgradeCard from '../sidebar/upgrade';
-
-import { Notifications } from './notifications';
-import Search from './search';
-
 import { Separator } from '@/components/ui/separator';
-import { PAGE_BREAD_CRUMBS } from '@/constants/pages';
-import { usePaths } from '@/hooks/use-nav';
+import ClerkAuthState from '../clerk-auth-state';
 import { HelpDuoToneWhite } from '@/icons';
+import { SubscriptionPlan } from '../subscription-plan';
+import UpgradeCard from '../sidebar/upgrade';
 import { LogoSmall } from '@/svgs/logo-small';
+import CreateAutomation from '../create-automation';
+import Search from './search';
+import { Notifications } from './notifications';
+import MainBreadCrumb from '../bread-crumbs/main-bread-crumb';
 
 type Props = {
   slug: string;
 };
 
-const InfoBar = ({ slug }: Props): JSX.Element | React.ReactNode => {
+const InfoBar = ({ slug }: Props) => {
   const { page } = usePaths();
   const currentPage = PAGE_BREAD_CRUMBS.includes(page) || page == slug;
 
@@ -55,16 +54,16 @@ const InfoBar = ({ slug }: Props): JSX.Element | React.ReactNode => {
                     <p className="text-[#9B9CA0]">Help</p>
                   </div>
                 </div>
-                {/* <SubscriptionPlan type="FREE"> */}
-                <div className="flex flex-1 flex-col justify-end">
-                  <UpgradeCard />
-                </div>
-                {/* </SubscriptionPlan> */}
+                <SubscriptionPlan type="FREE">
+                  <div className="flex flex-1 flex-col justify-end">
+                    <UpgradeCard />
+                  </div>
+                </SubscriptionPlan>
               </div>
             </Sheet>
           </span>
           <Search />
-          {/* <CreateAutomation /> */}
+          <CreateAutomation />
           <Notifications />
         </div>
         <MainBreadCrumb page={page === slug ? 'Home' : page} slug={slug} />

@@ -1,6 +1,5 @@
-import React from 'react';
-
 import { PAGE_ICON } from '@/constants/pages';
+import React from 'react';
 
 type Props = {
   page: string;

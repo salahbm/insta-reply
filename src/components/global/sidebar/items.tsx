@@ -1,15 +1,14 @@
-import Link from 'next/link';
-import React from 'react';
-
 import { SIDEBAR_MENU } from '@/constants/menu';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import React from 'react';
 
 type Props = {
   page: string;
   slug: string;
 };
 
-const Items = ({ page, slug }: Props): JSX.Element | React.ReactNode => {
+const Items = ({ page, slug }: Props) => {
   return SIDEBAR_MENU.map((item) => (
     <Link
       key={item.id}

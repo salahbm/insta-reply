@@ -2,7 +2,7 @@ type SpinnerProps = {
   color?: string;
 };
 
-export const Spinner = ({ color }: SpinnerProps): JSX.Element => {
+export const Spinner = ({ color }: SpinnerProps) => {
   return (
     <div role="status">
       <svg

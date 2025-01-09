@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 // Inspired by react-hot-toast library
@@ -25,7 +24,7 @@ const actionTypes = {
 
 let count = 0;
 
-function genId(): string {
+function genId() {
   count = (count + 1) % Number.MAX_SAFE_INTEGER;
   return count.toString();
 }
@@ -56,7 +55,7 @@ interface State {
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
-const addToRemoveQueue = (toastId: string): void => {
+const addToRemoveQueue = (toastId: string) => {
   if (toastTimeouts.has(toastId)) {
     return;
   }
