@@ -1,6 +1,6 @@
 {
   "name": "insta-reply",
-  "version": "0.4.1-alpha.1",
+  "version": "0.4.1-alpha.2",
   "private": true,
   "module": "index.ts",
   "type": "module",
