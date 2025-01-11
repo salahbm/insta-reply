@@ -4,12 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.1-alpha.2](https://github.com/salahbm/insta-reply/compare/v0.4.1-alpha.1...v0.4.1-alpha.2) (2025-01-09)
 
-
 ### ✨ Features
 
-* automation, slug, page, comps ([5634808](https://github.com/salahbm/insta-reply/commit/56348087b4928425e38a884252065a19b91eb95a))
-* automations, integrations, eslint ([e8b0b2f](https://github.com/salahbm/insta-reply/commit/e8b0b2f076fed3e036206303a3ee132a4281b39a))
-* **ui:** complete UI pages&compoents ([c611b89](https://github.com/salahbm/insta-reply/commit/c611b890e3d5add87077cf225127aabbea821596))
+- automation, slug, page, comps ([5634808](https://github.com/salahbm/insta-reply/commit/56348087b4928425e38a884252065a19b91eb95a))
+- automations, integrations, eslint ([e8b0b2f](https://github.com/salahbm/insta-reply/commit/e8b0b2f076fed3e036206303a3ee132a4281b39a))
+- **ui:** complete UI pages&compoents ([c611b89](https://github.com/salahbm/insta-reply/commit/c611b890e3d5add87077cf225127aabbea821596))
 
 ### [0.4.1-alpha.1](https://github.com/salahbm/insta-reply/compare/v0.4.1-alpha.0...v0.4.1-alpha.1) (2024-12-22)
 
